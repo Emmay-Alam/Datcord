@@ -1,6 +1,6 @@
 // Creating new user
 
-export const postUser = user => {
+export const register = user => {
   $.ajax({
       url: 'api/users',
       method: 'POST',
@@ -10,7 +10,7 @@ export const postUser = user => {
 
 // Logging in user
 
-export const postSession = user => {
+export const login = user => {
   $.ajax({
       url: 'api/session',
       method: 'POST',
@@ -20,7 +20,7 @@ export const postSession = user => {
 
 // Logging out user
 
-export const deleteSession = () => {
+export const logout = () => {
   $.ajax({
       url: 'api/session',
       method: 'DELETE'
