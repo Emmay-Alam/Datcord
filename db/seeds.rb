@@ -17,3 +17,5 @@ user5 = User.create!(username: "suzinator", email: "suz@gmail.com", password: "p
 user6 = User.create!(username: "soheep", email: "sohee@gmail.com", password: "password", dob: "1991-01-14", tag: 4582)
 user7 = User.create!(username: "arebiter", email: "pasan@gmail.com", password: "password", dob: "1996-09-14", tag: 9675)
 user8 = User.create!(username: "mothammer", email: "matt@gmail.com", password: "password", dob: "1988-04-22", tag: 1836)
+
+Server.destroy_all
