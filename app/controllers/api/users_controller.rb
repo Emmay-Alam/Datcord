@@ -1,7 +1,6 @@
 class Api::UsersController < ApplicationController
   def create
     @user = User.new(user_params)
-    @user[:tag] = rand(1..9999)
 
     if @user.save
       login!(@user)
