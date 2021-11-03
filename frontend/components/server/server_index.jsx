@@ -21,7 +21,7 @@ class ServerIndex extends React.Component {
     )
 
     return (
-      <ul>
+      <ul className="server-container">
         { serverIndexItems }
       </ul>
     )
