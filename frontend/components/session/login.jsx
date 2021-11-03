@@ -11,17 +11,47 @@ class Login extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
     };
 
   update(field) {
     return (e) => this.setState({ [field]: e.target.value} );
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
-
+  userLogin () {
     this.props.loginUser(this.state)
       .then(() => this.props.history.push('/channels/@me'))
+  }
+
+  handleDemo(e) {
+    e.preventDefault();
+
+    let email = "demouser@gmail.com".split("");
+    let password = "password".split("")
+
+    setTimeout(() => {
+      this.demoLogin(email, password)
+    }, 500)
+  }
+
+  demoLogin(email, password) {
+
+    if (email.length > 0) {
+      this.setState({ email: this.state.email + email.shift() },
+        () => window.setTimeout(() => this.demoLogin(email, password), 100)
+      );
+    } else if (password.length > 0) {
+      this.setState({ password: this.state.password + password.shift() },
+        () => window.setTimeout(() => this.demoLogin(email, password), 100)
+      );
+    } else {
+      this.userLogin();
+    }
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.userLogin();
   }
 
   render () {
@@ -44,6 +74,7 @@ class Login extends React.Component {
               onChange={this.update('password')}
             />
           </label>
+          <button onClick={this.handleDemo}>Login as a Demo User</button>
           <button onClick={this.handleSubmit}>Login</button>
           <p>Need an account? <Link to={"/register"}>Register</Link></p>
         </form>
