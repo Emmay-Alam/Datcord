@@ -12,4 +12,8 @@ class Server < ApplicationRecord
     foreign_key: :server_id,
     class_name: :Channel,
     dependent: :destroy
+
+  has_many :memberships,
+    as: :member_of,
+    dependent: :destroy
 end
