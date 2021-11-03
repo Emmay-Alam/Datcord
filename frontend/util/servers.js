@@ -5,14 +5,14 @@ export const requestServers = () => (
   })
 );
 
-export const requestServer = (serverId) => (
+export const requestServer = serverId => (
   $.ajax({
     method: 'GET',
     url: `/api/servers/${serverId}`
   })
 );
 
-export const createServer = (server) => (
+export const createServer = server => (
   $.ajax({
     method: 'POST',
     url: `/api/servers`,
@@ -20,7 +20,7 @@ export const createServer = (server) => (
   })
 );
 
-export const updateServer = (server) => (
+export const updateServer = server => (
   $.ajax({
     method: 'PATCH',
     url: `/api/servers/${server.id}`,
@@ -28,7 +28,7 @@ export const updateServer = (server) => (
   })
 );
 
-export const deleteServer = (serverId) => (
+export const deleteServer = serverId => (
   $.ajax({
     method: 'DELETE',
     url: `/api/servers/${serverId}`,
