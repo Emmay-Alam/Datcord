@@ -8,7 +8,7 @@ class NavBar extends React.Component {
 
   render () {
     const logout = this.props.user ?
-      <Link to={"/@me"} className="landing-button">Open Discord</Link> : <Link to={"/login"} className="landing-button">Login</Link>
+      <Link to={"/channels/@me"} className="landing-button">Open Discord</Link> : <Link to={"/login"} className="landing-button">Login</Link>
 
     return (
       <div>

@@ -21,7 +21,7 @@ class Login extends React.Component {
     e.preventDefault();
 
     this.props.loginUser(this.state)
-      .then(() => this.props.history.push('/@me'))
+      .then(() => this.props.history.push('/channels/@me'))
   }
 
   render () {
