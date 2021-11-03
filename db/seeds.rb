@@ -8,7 +8,8 @@
 
 User.destroy_all
 
-demo = User.create!(username: "demo", email: "demouser@gmail.com", password: "password", dob: "2000-01-01", tag: 9001)
+demo1 = User.create!(username: "demo", email: "demouser@gmail.com", password: "password", dob: "2000-01-01", tag: 9001)
+demo2 = User.create!(username: "demo2", email: "demouser2@gmail.com", password: "password", dob: "2000-01-01", tag: 8999)
 user1 = User.create!(username: "sunshinenim", email: "mansoo@gmail.com", password: "password", dob: "1993-06-09", tag: 4171)
 user2 = User.create!(username: "wood", email: "wood@gmail.com", password: "password", dob: "1997-03-04", tag: 1234)
 user3 = User.create!(username: "stelluhhh", email: "stella@gmail.com", password: "password", dob: "1997-09-13", tag: 229)
@@ -19,3 +20,8 @@ user7 = User.create!(username: "arebiter", email: "pasan@gmail.com", password: "
 user8 = User.create!(username: "mothammer", email: "matt@gmail.com", password: "password", dob: "1988-04-22", tag: 1836)
 
 Server.destroy_all
+
+server1 = Server.create!(name: "True Study Buddies Come to FL", owner_id: user1.id)
+server2 = Server.create!(name: "a/A 08-09-2021 Discord", owner_id: demo2.id)
+server3 = Server.create!(name: "soybean", owner_id: user4.id)
+server4 = Server.create!(name: "One Brain One Cohort", owner_id: user2.id)
