@@ -13,5 +13,5 @@
  *= require_self
  */
 
-@import './reset.scss';
+@import './reset.css';
 @import './splash/splash.scss';
