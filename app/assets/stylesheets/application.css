@@ -15,3 +15,4 @@
 
 @import './reset.css';
 @import './splash/splash.scss';
+@import './server/server.scss'
