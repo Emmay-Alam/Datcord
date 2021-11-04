@@ -33,51 +33,61 @@ class Register extends React.Component {
 
   render () {
     return (
-      <div>
-        <h2>Create an account</h2>
-        <form>
-          <label>EMAIL
-            <input
-              type="text"
-              value={this.state.email}
-              onChange={this.update('email')}
-            />
-          </label>
-          <label>USERNAME
-            <input
-              type="text"
-              value={this.state.username}
-              onChange={this.update('username')}
-            />
-          </label>
-          <label>PASSWORD
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.update('password')}
-            />
-          </label>
-          <label>DATE OF BIRTH
-            <input
-              type="number"
-              value={this.state.month}
-              onChange={this.update('month')}
-            />
-            <input
-              type="number"
-              value={this.state.day}
-              onChange={this.update('day')}
-            />
-            <input
-              type="number"
-              value={this.state.year}
-              onChange={this.update('year')}
-            />
-          </label>
-          <button onClick={this.handleSubmit}>Continue</button>
-          <Link to={"/login"}>Already have an account?</Link>
-          <p>By registering, you agree to Datcord's Terms of Service and Privacy Policy.</p>
-        </form>
+      <div className="register-wrapper">
+        <div className="register-box">
+          <div className="register-container">
+            <h2 className="register-title">Create an account</h2>
+            <form className="register-form">
+              <label className="register-label">EMAIL
+                <input
+                  className="register-input"
+                  type="text"
+                  value={this.state.email}
+                  onChange={this.update('email')}
+                />
+              </label>
+              <label className="register-label">USERNAME
+                <input
+                  className="register-input"
+                  type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                />
+              </label>
+              <label className="register-label">PASSWORD
+                <input
+                  className="register-input"
+                  type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                />
+              </label>
+              <label className="register-label">DATE OF BIRTH
+                <input
+                  className="register-input"
+                  type="number"
+                  value={this.state.month}
+                  onChange={this.update('month')}
+                />
+                <input
+                  className="register-input"
+                  type="number"
+                  value={this.state.day}
+                  onChange={this.update('day')}
+                />
+                <input
+                  className="register-input"
+                  type="number"
+                  value={this.state.year}
+                  onChange={this.update('year')}
+                />
+              </label>
+              <button className="register-button" onClick={this.handleSubmit}>Continue</button>
+              <Link className="register-login-button" to={"/login"}>Already have an account?</Link>
+              <p className="terms">By registering, you agree to Datcord's <strong>Terms of Service</strong> and <strong>Privacy Policy</strong>.</p>
+            </form>
+          </div>
+        </div>
       </div>
     );
   }

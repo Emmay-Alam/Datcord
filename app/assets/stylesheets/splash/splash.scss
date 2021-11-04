@@ -1,4 +1,5 @@
 @import url('http://fonts.cdnfonts.com/css/whitney-2');
+
 @font-face {
   font-family: 'Ginto Nord Black';
   src: url(asset-path('GintoNordBlack.ttf')) format('truetype');
@@ -10,30 +11,33 @@
 };
 
 .splash-header {
-  background: #484cec;
+  background: #404EED;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  justify-content: space-between;
+  gap: 0 20px;
   width: 100%;
   height: 80px;
+  padding: 20px;
 }
 
 .navbar-links {
   display: flex;
-  flex-direction: row;
   text-align: center;
 }
 
 .navbar-links > li {
   color: #fff;
+  display: flex;
   font-family: 'Whitney';
   font-size: 16px;
   font-weight: 500;
-  margin: 10px;
+  margin: 0 10px 0px 10px;
   padding: 10px;
 }
 
@@ -48,7 +52,7 @@
 
 .splash-slogan > h1 {
   color: #fff;
-  display: flex;
+  display: grid;
   justify-content: center;
   font-family: 'Ginto Nord Black';
   font-size: 56px;

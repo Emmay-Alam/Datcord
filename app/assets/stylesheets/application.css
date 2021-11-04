@@ -15,4 +15,6 @@
 
 @import './reset.css';
 @import './splash/splash.scss';
+@import './session/login.scss';
+@import './session/register.scss';
 @import './server/server.scss'

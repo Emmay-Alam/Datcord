@@ -56,28 +56,41 @@ class Login extends React.Component {
 
   render () {
     return (
-      <div>
-        <h2>Welcome Back!</h2>
-        <h3>We're so excited to see you again!</h3>
-        <form>
-          <label>EMAIL
-            <input
-              type="text"
-              value={this.state.email}
-              onChange={this.update('email')}
-            />
-          </label>
-          <label>PASSWORD
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.update('password')}
-            />
-          </label>
-          <button onClick={this.handleDemo}>Login as a Demo User</button>
-          <button onClick={this.handleSubmit}>Login</button>
-          <p>Need an account? <Link to={"/register"}>Register</Link></p>
-        </form>
+      <div className='login-page'>
+        <div className="login-wrapper">
+          <div className="login-box">
+            <div className="login-container">
+              <h2 className="login-title">Welcome back!</h2>
+              <h3 className="login-secondary-title">We're so excited to see you again!</h3>
+              <form className="login-form">
+                <label className="login-label"><p>EMAIL</p>
+                  <input
+                    className="login-input email"
+                    type="text"
+                    value={this.state.email}
+                    onChange={this.update('email')}
+                  />
+                </label>
+                <label className="login-label"><p>PASSWORD</p>
+                  <input
+                    className="login-input password"
+                    type="password"
+                    value={this.state.password}
+                    onChange={this.update('password')}
+                  />
+                </label>
+                <button className="demo-button" onClick={this.handleDemo}>Login as demo user</button>
+                <button className="login-button" onClick={this.handleSubmit}>Login</button>
+                <p className="login-redirect">Need an account? <Link className="login-register-button" to={"/register"}>Register</Link></p>
+              </form>
+            </div>
+            <div className="qr-section">
+              <img src={window.qr_code} />
+              <h2 className="qr-header">Log in with QR Code</h2>
+              <h3 className="qr-content">Scan this with the <strong>Discord mobile app</strong> to log in instantly.</h3>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
