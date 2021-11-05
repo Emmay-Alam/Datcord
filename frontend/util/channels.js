@@ -5,3 +5,10 @@ export const createChannel = (serverId, channel) => (
     data: { channel }
   })
 );
+
+export const deleteChannel = channelId => (
+  $.ajax({
+    method: 'DELETE',
+    url: `/api/channels/${channelId}`
+  })
+);
