@@ -19,25 +19,48 @@ user6 = User.create!(username: "soheep", email: "sohee@gmail.com", password: "pa
 user7 = User.create!(username: "arebiter", email: "pasan@gmail.com", password: "password", dob: "1996-09-14", tag: 9675)
 user8 = User.create!(username: "mothammer", email: "matt@gmail.com", password: "password", dob: "1988-04-22", tag: 1836)
 
-# SERVERS/CHANNELS
+# SERVERS / CHANNELS / MEMBERSHIPS
 
 server1 = Server.create!(name: "True Study Buddies Come to FL", owner_id: user1.id)
 
-channel1A = Channel.create(name: "general", server_id: server1.id)
-channel1B = Channel.create(name: "code", server_id: server1.id)
-channel1C = Channel.create(name: "vic-shots", server_id: server1.id)
-channel1D = Channel.create(name: "vc-text", server_id: server1.id)
+channel1A = Channel.create!(name: "general", server_id: server1.id)
+channel1B = Channel.create!(name: "code", server_id: server1.id)
+channel1C = Channel.create!(name: "vic-shots", server_id: server1.id)
+channel1D = Channel.create!(name: "vc-text", server_id: server1.id)
+
+membership1A = Membership.create!(user_id: demo1.id, membership_type: server1.class.name, membership_id: server1)
+membership1B = Membership.create!(user_id: user1.id, membership_type: server1.class.name, membership_id: server1)
+membership1C = Membership.create!(user_id: user2.id, membership_type: server1.class.name, membership_id: server1)
+membership1D = Membership.create!(user_id: user3.id, membership_type: server1.class.name, membership_id: server1)
+membership1E = Membership.create!(user_id: user4.id, membership_type: server1.class.name, membership_id: server1)
+membership1F = Membership.create!(user_id: user5.id, membership_type: server1.class.name, membership_id: server1)
+membership1G = Membership.create!(user_id: user6.id, membership_type: server1.class.name, membership_id: server1)
+membership1H = Membership.create!(user_id: user7.id, membership_type: server1.class.name, membership_id: server1)
+membership1I = Membership.create!(user_id: user8.id, membership_type: server1.class.name, membership_id: server1)
 
 server2 = Server.create!(name: "a/A 08-09-2021 Discord", owner_id: demo2.id)
 
-channel2A = Channel.create(name: "general", server_id: server2.id)
-channel2B = Channel.create(name: "homework-help", server_id: server2.id)
-channel2C = Channel.create(name: "resources", server_id: server2.id)
+channel2A = Channel.create!(name: "general", server_id: server2.id)
+channel2B = Channel.create!(name: "homework-help", server_id: server2.id)
+channel2C = Channel.create!(name: "resources", server_id: server2.id)
+
+membership2A = Membership.create!(user_id: demo1.id, membership_type: server2.class.name, membership_id: server2)
+membership2B = Membership.create!(user_id: demo2.id, membership_type: server2.class.name, membership_id: server2)
 
 server3 = Server.create!(name: "soybean", owner_id: user4.id)
 
-channel3A = Channel.create(name: "general", server_id: server3.id)
+channel3A = Channel.create!(name: "general", server_id: server3.id)
+
+membership3A = Membership.create!(user_id: demo1.id, membership_type: server3.class.name, membership_id: server3)
+membership3B = Membership.create!(user_id: user1.id, membership_type: server3.class.name, membership_id: server3)
+membership3C = Membership.create!(user_id: user2.id, membership_type: server3.class.name, membership_id: server3)
+membership3D = Membership.create!(user_id: user3.id, membership_type: server3.class.name, membership_id: server3)
+membership3E = Membership.create!(user_id: user4.id, membership_type: server3.class.name, membership_id: server3)
+membership3F = Membership.create!(user_id: user5.id, membership_type: server3.class.name, membership_id: server3)
 
 server4 = Server.create!(name: "One Brain One Cohort", owner_id: user2.id)
 
-channel4A = Channel.create(name: "general", server_id: server4.id)
+channel4A = Channel.create!(name: "general", server_id: server4.id)
+
+membership4A = Membership.create!(user_id: demo1.id, membership_type: server4.class.name, membership_id: server4)
+membership4B = Membership.create!(user_id: user2.id, membership_type: server4.class.name, membership_id: server4)
