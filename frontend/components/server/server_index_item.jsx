@@ -11,7 +11,7 @@ class ServerIndexItem extends React.Component {
 
     return (
       <li>
-        <Link to={`/channels/${server.id}`}>
+        <Link to={`/channels/${server.id}/${server.channels[0]}`}>
           { server.name }
         </Link>
       </li>

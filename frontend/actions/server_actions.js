@@ -40,7 +40,7 @@ export const requestServers = () => dispatch => (
 export const requestServer = serverId => dispatch => (
   ServerAPIUtil.requestServer(serverId)
     .then(
-      errors => dispatch(receiveServer(errors))
+      server => dispatch(receiveServer(server))
     )
 );
 

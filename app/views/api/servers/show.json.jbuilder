@@ -1,4 +1,6 @@
-json.partial! 'api/servers/server', server: @server
+json.server do
+  json.partial! 'api/servers/server', server: @server
+end
 
 json.channels do
   @server.channels.each do |channel|

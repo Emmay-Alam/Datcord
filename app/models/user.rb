@@ -15,7 +15,10 @@ class User < ApplicationRecord
     foreign_key: :owner_id,
     class_name: :Server
 
-  has_many :memberships
+  has_many :memberships,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Membership
 
   has_many :servers,
     through: :memberships,

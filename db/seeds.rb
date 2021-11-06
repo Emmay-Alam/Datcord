@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.destroy_all
+# USERS
 
 demo1 = User.create!(username: "demo", email: "demouser@gmail.com", password: "password", dob: "2000-01-01", tag: 9001)
 demo2 = User.create!(username: "demo2", email: "demouser2@gmail.com", password: "password", dob: "2000-01-01", tag: 8999)
@@ -19,9 +19,25 @@ user6 = User.create!(username: "soheep", email: "sohee@gmail.com", password: "pa
 user7 = User.create!(username: "arebiter", email: "pasan@gmail.com", password: "password", dob: "1996-09-14", tag: 9675)
 user8 = User.create!(username: "mothammer", email: "matt@gmail.com", password: "password", dob: "1988-04-22", tag: 1836)
 
-Server.destroy_all
+# SERVERS/CHANNELS
 
 server1 = Server.create!(name: "True Study Buddies Come to FL", owner_id: user1.id)
+
+channel1A = Channel.create(name: "general", server_id: server1.id)
+channel1B = Channel.create(name: "code", server_id: server1.id)
+channel1C = Channel.create(name: "vic-shots", server_id: server1.id)
+channel1D = Channel.create(name: "vc-text", server_id: server1.id)
+
 server2 = Server.create!(name: "a/A 08-09-2021 Discord", owner_id: demo2.id)
+
+channel2A = Channel.create(name: "general", server_id: server2.id)
+channel2B = Channel.create(name: "homework-help", server_id: server2.id)
+channel2C = Channel.create(name: "resources", server_id: server2.id)
+
 server3 = Server.create!(name: "soybean", owner_id: user4.id)
+
+channel3A = Channel.create(name: "general", server_id: server3.id)
+
 server4 = Server.create!(name: "One Brain One Cohort", owner_id: user2.id)
+
+channel4A = Channel.create(name: "general", server_id: server4.id)
