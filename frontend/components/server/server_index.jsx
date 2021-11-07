@@ -14,7 +14,7 @@ class ServerIndex extends React.Component {
     const serverIndexItems = this.props.servers.map(server =>
       (
         <ServerIndexItem
-          key={server.id}
+          key={`${server.id}-${server.name}`}
           server={server}
         />
       )

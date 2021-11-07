@@ -1,5 +1,6 @@
 import React from 'react';
 import ChannelIndex from '../channel/channel_index';
+import UserContainer from '../user/user_container';
 
 class Server extends React.Component {
   componentDidMount () {
@@ -16,8 +17,10 @@ class Server extends React.Component {
     const { server, channels } = this.props;
 
     return (
-      <div className="channels-index">
-        <ChannelIndex server={server} channels={channels} />
+      <div>
+        <div className="channels-index">
+          <ChannelIndex server={server} channels={channels} />
+        </div>
       </div>
     )
   }

@@ -19,9 +19,9 @@ const receiveSessionErrors = errors => ({
   errors
 });
 
-const resetSessionErrors = () => ({
+export const resetSessionErrors = () => ({
   type: RESET_SESSION_ERRORS
-})
+});
 
 export const registerUser = user => dispatch => (
   SessionAPIUtil.register(user)
@@ -29,7 +29,7 @@ export const registerUser = user => dispatch => (
       user => dispatch(receiveCurrentUser(user)),
       errors => dispatch(receiveSessionErrors(errors.responseJSON))
     )
-)
+);
 
 export const loginUser = user => dispatch => (
   SessionAPIUtil.login(user)
@@ -37,7 +37,7 @@ export const loginUser = user => dispatch => (
       user => dispatch(receiveCurrentUser(user)),
       errors => dispatch(receiveSessionErrors(errors.responseJSON))
     )
-)
+);
 
 export const logoutUser = user => dispatch => (
   SessionAPIUtil.logout(user)
@@ -45,4 +45,4 @@ export const logoutUser = user => dispatch => (
       () => dispatch(logoutCurrentUser()),
       errors => dispatch(receiveSessionErrors(errors.responseJSON))
     )
-)
+);

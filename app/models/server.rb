@@ -14,6 +14,10 @@ class Server < ApplicationRecord
     dependent: :destroy
 
   has_many :memberships,
-    as: :member_of,
+    as: :membership,
     dependent: :destroy
+
+  has_many :members,
+    through: :memberships,
+    source: :user
 end
