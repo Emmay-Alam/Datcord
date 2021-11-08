@@ -10,6 +10,7 @@
 
 demo1 = User.create!(username: "demo", email: "demouser@gmail.com", password: "password", dob: "2000-01-01", tag: 9001)
 demo2 = User.create!(username: "demo2", email: "demouser2@gmail.com", password: "password", dob: "2000-01-01", tag: 8999)
+user0 = User.create!(username: "emmay", email: "emmay@gmail.com", password: "password", dob: "1998-02-26", tag: 8888)
 user1 = User.create!(username: "sunshinenim", email: "mansoo@gmail.com", password: "password", dob: "1993-06-09", tag: 4171)
 user2 = User.create!(username: "wood", email: "wood@gmail.com", password: "password", dob: "1997-03-04", tag: 1234)
 user3 = User.create!(username: "stelluhhh", email: "stella@gmail.com", password: "password", dob: "1997-09-13", tag: 229)
@@ -64,3 +65,28 @@ channel4A = Channel.create!(name: "general", server_id: server4.id)
 
 membership4A = Membership.create!(user_id: demo1.id, membership_type: server4.class.name, membership_id: server4.id)
 membership4B = Membership.create!(user_id: user2.id, membership_type: server4.class.name, membership_id: server4.id)
+
+# DMS / MEMBERSHIPS
+
+dm1 = Dm.create!(name: user1.username)
+
+membership5A = Membership.create!(user_id: demo1.id, membership_type: dm1.class.name, membership_id: dm1.id)
+membership5B = Membership.create!(user_id: user1.id, membership_type: dm1.class.name, membership_id: dm1.id)
+
+dm2 = Dm.create!(name: demo2.username)
+
+membership6A = Membership.create!(user_id: demo1.id, membership_type: dm2.class.name, membership_id: dm2.id)
+membership6B = Membership.create!(user_id: demo2.id, membership_type: dm2.class.name, membership_id: dm2.id)
+
+dm3 = Dm.create!(name: "AAAA")
+
+membership7A = Membership.create!(user_id: user0.id, membership_type: dm3.class.name, membership_id: dm3.id)
+membership7B = Membership.create!(user_id: user1.id, membership_type: dm3.class.name, membership_id: dm3.id)
+membership7C = Membership.create!(user_id: user2.id, membership_type: dm3.class.name, membership_id: dm3.id)
+membership7D = Membership.create!(user_id: user3.id, membership_type: dm3.class.name, membership_id: dm3.id)
+
+dm4 = Dm.create!(name: "#{user4.username}, #{user5.username}, #{user6.username}")
+
+membership8A = Membership.create!(user_id: user4.id, membership_type: dm4.class.name, membership_id: dm4.id)
+membership8B = Membership.create!(user_id: user5.id, membership_type: dm4.class.name, membership_id: dm4.id)
+membership8C = Membership.create!(user_id: user6.id, membership_type: dm4.class.name, membership_id: dm4.id)
