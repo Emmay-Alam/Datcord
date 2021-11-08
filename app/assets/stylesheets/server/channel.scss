@@ -1,4 +1,50 @@
+@font-face {
+  font-family: 'Ginto Normal Regular';
+  src: url(asset-path('GintoNormalRegular.ttf')) format('truetype');
+};
+
 .second-side-container {
+  background: #2f3136;
   display: flex;
-  // flex-direction: column;
+  flex-direction: column;
+  width: 240px;
+  height: 100vh;
+}
+
+.server-header {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-family: 'Ginto Normal Regular';
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  height: 48px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 rgba(4,4,5,0.2),0 1.5px 0 rgba(6,6,7,0.05),0 2px 0 rgba(4,4,5,0.05);
+  padding: 0 16px;
+}
+
+.server-name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.server-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user-container {
+  background-color: #292b2f;
+  display: flex;
+  flex-direction: row;
+}
+
+.channels-index > h2 {
+  color: #8e9297;
+  font-family: 'Ginto Normal Regular';
+  font-size: 12px;
+  padding: 16px 0 0 12px;
 }
