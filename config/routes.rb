@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     end
 
     resources :channels, only: [:update, :destroy]
+    resources :dms, only: [:index, :show, :destroy]
   end
 
   root to: 'static_pages#root'
