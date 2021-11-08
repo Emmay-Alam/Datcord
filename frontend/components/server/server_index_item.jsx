@@ -8,7 +8,6 @@ class ServerIndexItem extends React.Component {
 
   render () {
     const { server } = this.props;
-
     return (
       <li>
         <Link to={`/channels/${server.id}/${server.channels[0]}`}>

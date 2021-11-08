@@ -7,13 +7,18 @@ const ChannelsReducer = (oldState = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_SERVER:
-      if (!action.server.channels) {
+      if (!action.response.channels) {
         return oldState;
       };
-      for (let [id, channel] of Object.entries(action.server.channels)) {
-        newState[id] = channel;
+      // NEED TO BE ABLE TO STORE INTO STATE
+      // for (let [id, channel] of Object.entries(action.response.channels)) {
+      //   newState[id] = channel;
+      // }
+      const nextState = {};
+      for (let [id, channel] of Object.entries(action.response.channels)) {
+        nextState[id] = channel;
       }
-      return newState;
+      return nextState;
     case RECEIVE_CHANNEL:
       newState[action.channel.id] = action.channel
       return newState;

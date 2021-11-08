@@ -9,13 +9,13 @@ class ChannelIndexItem extends React.Component {
   render () {
     const { channel } = this.props;
 
-    return (
+    return channel ? (
       <li>
         <Link to={`/channels/${channel.serverId}/${channel.id}`}>
           { channel.name }
         </Link>
       </li>
-    )
+    ) : null
   }
 }
 

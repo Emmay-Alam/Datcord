@@ -11,6 +11,7 @@ class ServerIndex extends React.Component {
   }
 
   render () {
+    const { openModal } = this.props;
     const serverIndexItems = this.props.servers.map(server =>
       (
         <ServerIndexItem
@@ -21,9 +22,14 @@ class ServerIndex extends React.Component {
     )
 
     return (
-      <ul className="server-container">
-        { serverIndexItems }
-      </ul>
+      <div>
+        <ul className="server-container">
+          { serverIndexItems }
+        </ul>
+        <div className="new-server">
+          <button onClick={() => openModal('Add a Server')}>Add a Server</button>
+        </div>
+      </div>
     )
   }
 }

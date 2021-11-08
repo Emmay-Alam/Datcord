@@ -11,9 +11,9 @@ const receiveServers = servers => ({
   servers
 });
 
-const receiveServer = server => ({
+const receiveServer = response => ({
   type: RECEIVE_SERVER,
-  server
+  response
 });
 
 const removeServer = serverId => ({

@@ -25,6 +25,11 @@ class User < ApplicationRecord
     source: :membership,
     source_type: :Server
 
+  has_many :dms,
+    through: :memberships,
+    source: :membership,
+    source_type: :Dm
+
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
     (user && user.is_password?(password)) ? user : nil

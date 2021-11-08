@@ -14,6 +14,8 @@ class Api::ServersController < ApplicationController
     @server.owner_id = current_user.id
 
     if @server.save
+      Channel.create(name: "general", server_id: @server.id)
+      Membership.create(user_id: @server.owner_id, membership_type: "Server", membership_id: @server.id)
       render 'api/servers/show'
     else
       render json: @server.errors.full_messages, status: 422
@@ -43,6 +45,6 @@ class Api::ServersController < ApplicationController
   private
 
   def server_params
-    params.require(:server).permit(:name)
+    params.require(:server).permit(:name, :owner_id)
   end
 end

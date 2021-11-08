@@ -25,7 +25,7 @@ class UserSettings extends React.Component {
         </div>
         <div className="main-settings">
           <div>
-            <button onClick={() => closeModal()}></button>
+            <button onClick={() => closeModal()}>X</button>
           </div>
         </div>
       </div>

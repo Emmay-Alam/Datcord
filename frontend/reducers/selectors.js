@@ -1,12 +1,19 @@
 export const filterChannels = (state, serverId) => {
-  const serverChannels = state.entities.servers[serverId].channels
+  const serverChannels = state.entities.servers[serverId]?.channels
   const filteredChannels = [];
 
-  for (let id of serverChannels) {
-    if (state.entities.channels[id]) {
-      filteredChannels.push(state.entities.channels[id]);
-    };
-  };
+  if (!serverChannels) return filteredChannels;
 
+  for (let channelId of serverChannels) {
+    filteredChannels.push(state.entities.channels[channelId])
+  }
+  console.log(filteredChannels);
   return filteredChannels;
+};
+
+export const filterMembers = (state, serverId) => {
+  const serverMembers = Object.values(state.entities.users)
+  const filteredMembers = serverMembers.filter(member => member.serverId === serverId)
+
+  return filteredMembers;
 };

@@ -6,6 +6,7 @@ class ChannelIndex extends React.Component {
     super(props);
   };
 
+
   render () {
     const { server, channels } = this.props;
 
