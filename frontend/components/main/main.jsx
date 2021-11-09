@@ -1,12 +1,13 @@
 import React from 'react';
-import { Route } from 'react-router';
+import { Route, Switch } from 'react-router';
 import Home from '../home/home';
 import ServerIndexContainer from '../server/server_index_container';
 import ServerChannelsContainer from '../server/server_channels_container';
 import ServerMembersContainer from '../server/server_members_container';
 import ModalContainer from '../modal/modal_container';
 import DmIndexContainer from '../dm/dm_index_container';
-import UserContainer from '../user/user_container';
+import ChatChannelContainer from '../message/chat_channel_container';
+import ChatRoomContainer from '../message/chat_room_container';
 
 
 class Main extends React.Component {
@@ -20,13 +21,22 @@ class Main extends React.Component {
           <ServerIndexContainer />
         </div>
         <div className="second-side-container">
-          <Route path='/channels/@me' component={DmIndexContainer} />
-          <Route path='/channels/:serverId/:channelId' component={ServerChannelsContainer} />
-          <Route path="/channels/" component={UserContainer} />
+          <Switch>
+            <Route exact path='/channels/@me/:dmId?' component={DmIndexContainer} />
+            <Route exact path='/channels/:serverId/:channelId' component={ServerChannelsContainer} />
+          </Switch>
         </div>
-        <div className="chat-container">ChatRoom goes here</div>
+        <div className="chat-container">
+          <Switch>
+            <Route exact path='/channels/@me/:dmId' component={ChatRoomContainer} />
+            <Route exact path='/channels/:serverId/:channelId' component={ChatRoomContainer} />
+          </Switch>
+        </div>
         <div className="members-container">
-          <Route path='/channels/:serverId/:channelId' component={ServerMembersContainer} />
+        <Switch>
+          <Route exact path='/channels/@me/:dmId?' render={() => <h1>"hello"</h1>} />
+          <Route exact path='/channels/:serverId/:channelId' component={ServerMembersContainer} />
+        </Switch>
         </div>
       </div>
     )

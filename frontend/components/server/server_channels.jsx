@@ -25,6 +25,9 @@ class ServerChannels extends React.Component {
           <h2>TEXT CHANNELS</h2>
           <ChannelIndex server={server} channels={channels} />
         </div>
+        <div>
+          <UserContainer />
+        </div>
       </div>
     ) : null
   }

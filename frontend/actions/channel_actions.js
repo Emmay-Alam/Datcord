@@ -24,6 +24,14 @@ export const resetChannelErrors = () => ({
   type: RESET_CHANNEL_ERRORS
 });
 
+export const requestChannel = channelId => dispatch => (
+  ChannelAPIUtil.requestChannel(channelId)
+    .then(
+      response => dispatch(receiveChannel(response)),
+      errors => dispatch(receiveChannelErrors(errors.responseJSON))
+    )
+);
+
 export const createChannel = (serverId, channel) => dispatch => (
   ChannelAPIUtil.createChannel(serverId, channel)
     .then(

@@ -1,3 +1,10 @@
+export const requestChannel = channelId => (
+  $.ajax({
+    method: 'GET',
+    url: `/api/channels/${channelId}`
+  })
+);
+
 export const createChannel = (serverId, channel) => (
   $.ajax({
     method: 'POST',
