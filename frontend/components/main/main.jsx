@@ -7,6 +7,7 @@ import ServerMembersContainer from '../server/server_members_container';
 import ModalContainer from '../modal/modal_container';
 import DmIndexContainer from '../dm/dm_index_container';
 import ChatChannelContainer from '../message/chat_channel_container';
+import ChatDmContainer from '../message/chat_dm_container';
 import ChatRoomContainer from '../message/chat_room_container';
 
 
@@ -28,8 +29,8 @@ class Main extends React.Component {
         </div>
         <div className="chat-container">
           <Switch>
-            <Route exact path='/channels/@me/:dmId' component={ChatRoomContainer} />
-            <Route exact path='/channels/:serverId/:channelId' component={ChatRoomContainer} />
+            <Route exact path='/channels/@me/:dmId' component={ChatDmContainer} />
+            <Route exact path='/channels/:serverId/:channelId' component={ChatChannelContainer} />
           </Switch>
         </div>
         <div className="members-container">

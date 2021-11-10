@@ -6,8 +6,8 @@ import ServerChannels from './server_channels';
 const mSTP = (state, ownProps) => {
   return {
   server: state.entities.servers[ownProps.match.params.serverId],
-  channels: state.entities.channels
-  // channels: filterChannels(state, ownProps.match.params.serverId)
+  // channels: state.entities.channels
+  channels: filterChannels(state, ownProps.match.params.serverId)
 }}
 
 const mDTP = dispatch => ({

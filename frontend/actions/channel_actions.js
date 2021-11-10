@@ -5,9 +5,9 @@ export const REMOVE_CHANNEL = 'REMOVE_CHANNEL';
 export const RECEIVE_CHANNEL_ERRORS = 'RECEIVE_CHANNEL_ERRORS';
 export const RESET_CHANNEL_ERRORS = 'RESET_CHANNEL_ERRORS';
 
-export const receiveChannel = channel => ({
+export const receiveChannel = response => ({
   type: RECEIVE_CHANNEL,
-  channel
+  response
 });
 
 export const removeChannel = channel => ({

@@ -4,7 +4,7 @@ import MessageFormContainer from "./message_form_container";
 class ChatRoom extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { messages: [] };
+
     this.bottom = React.createRef();
   }
 
@@ -15,12 +15,10 @@ class ChatRoom extends React.Component {
         received: data => {
           switch (data.type) {
             case "message":
-              this.setState({
-                messages: this.state.messages.concat(data.message)
-              });
+              this.props.receiveMessage(data.message);
               break;
             case "messages":
-              this.setState({ messages: data.messages });
+              this.props.receiveMessages(data.messages);
               break;
           }
         },
@@ -36,17 +34,20 @@ class ChatRoom extends React.Component {
   }
 
   componentDidUpdate() {
-    this.bottom.current.scrollIntoView();
+    // this.bottom.current.scrollIntoView();
   }
 
   render() {
-    const messageList = this.state.messages.map((message, idx) => {
+
+    const { type, messagedId } = this.props;
+
+    const messageList = this.props.messages.map((message, idx) => {
       return (
         <li key={message.id}>
-          {message}
+          {message.body}
           <div ref={this.bottom} />
         </li>
-      );
+      )
     });
     return (
       <div className="chatroom-container">
@@ -56,7 +57,9 @@ class ChatRoom extends React.Component {
           Load Chat History
         </button>
         <div className="message-list">{messageList}</div>
-        <MessageFormContainer />
+        <MessageFormContainer
+          type={type}
+          messagedId={messagedId} />
       </div>
     )
   }

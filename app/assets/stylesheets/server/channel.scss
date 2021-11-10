@@ -11,6 +11,13 @@
   height: 100vh;
 }
 
+.server-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%
+}
+
 .server-header {
   display: flex;
   align-items: center;
@@ -27,20 +34,10 @@
 }
 
 .server-name {
+  width: 186px;
+  line-height: 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-
-.server-content-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.user-container {
-  background-color: #292b2f;
-  display: flex;
-  flex-direction: row;
 }
 
 .channels-index > h2 {

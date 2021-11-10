@@ -11,16 +11,16 @@ const ChannelsReducer = (oldState = {}, action) => {
         return oldState;
       };
       // NEED TO BE ABLE TO STORE INTO STATE
-      // for (let [id, channel] of Object.entries(action.response.channels)) {
-      //   newState[id] = channel;
-      // }
-      const nextState = {};
       for (let [id, channel] of Object.entries(action.response.channels)) {
-        nextState[id] = channel;
+        if (!newState[id]?.messages) newState[id] = channel;
       }
-      return nextState;
+      // const nextState = {};
+      // for (let [id, channel] of Object.entries(action.response.channels)) {
+      //   if (!nextState[id]?.messages) nextState[id] = channel;
+      // }
+      return newState;
     case RECEIVE_CHANNEL:
-      newState[action.channel.id] = action.channel
+      newState[action.response.channel.id] = action.response.channel
       return newState;
     case REMOVE_CHANNEL:
       delete newState[action.channelId]

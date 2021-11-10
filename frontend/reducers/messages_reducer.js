@@ -2,6 +2,7 @@ import { RECEIVE_CHANNEL } from '../actions/channel_actions';
 import { RECEIVE_DM } from '../actions/dm_actions';
 import {
   RECEIVE_MESSAGE,
+  RECEIVE_MESSAGES,
   REMOVE_MESSAGE } from '../actions/message_actions';
 
 
@@ -10,6 +11,8 @@ const MessagesReducer = (oldState={}, action) => {
   let newState = Object.assign({}, oldState);
 
   switch (action.type) {
+    case RECEIVE_MESSAGES:
+      return action.messages
     case RECEIVE_MESSAGE:
       newState[action.message.id] = action.message;
       return newState;

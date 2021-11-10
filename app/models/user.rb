@@ -10,6 +10,8 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6, allow_nil: true, message: "Must be 6 or more in length" }
   validates :session_token, presence: true, uniqueness: true
 
+  has_one_attached :photo
+
   has_many :owned_servers,
     primary_key: :id,
     foreign_key: :owner_id,

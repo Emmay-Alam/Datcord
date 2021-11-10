@@ -1,4 +1,6 @@
 import React from 'react';
+import { BsGearFill, BsHeadphones } from 'react-icons/bs';
+import { FaMicrophone } from 'react-icons/fa';
 
 class User extends React.Component {
   constructor(props) {
@@ -9,14 +11,26 @@ class User extends React.Component {
     const { currentUser, openModal } = this.props;
 
     return (
-      <div>
-        <div>
-          {currentUser.username}#{currentUser.tag}
+      <div className="user-content-container">
+        <div className="user-avatar"></div>
+        <div className="user-info">
+          <div className="user-username">
+            {currentUser.username}
+          </div>
+          <div className="user-tag">
+            #{currentUser.tag}
+          </div>
         </div>
-        <div>
-          <button>Mute (Coming Soon!)</button>
-          <button>Deafen (Coming Soon!)</button>
-          <button onClick={() => openModal('User Settings')}>User Settings</button>
+        <div className="user-buttons">
+          <button>
+            <FaMicrophone size={18} />
+          </button>
+          <button>
+            <BsHeadphones size={21} />
+          </button>
+          <button onClick={() => openModal('User Settings')}>
+            <BsGearFill size={17} />
+          </button>
         </div>
       </div>
     )

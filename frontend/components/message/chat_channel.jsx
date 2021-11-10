@@ -1,5 +1,5 @@
 import React from 'react';
-import ChatRoom from './ChatRoom';
+import ChatRoomContainer from './chat_room_container';
 
 class ChatChannel extends React.Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class ChatChannel extends React.Component {
 
     return channel ? (
       <div>
-        <ChatRoom />
+        <ChatRoomContainer type={this.props.type} messagedId={channel.id} />
       </div>
     ) : null
   }

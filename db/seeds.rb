@@ -90,3 +90,6 @@ dm4 = Dm.create!(name: "#{user4.username}, #{user5.username}, #{user6.username}"
 membership8A = Membership.create!(user_id: user4.id, membership_type: dm4.class.name, membership_id: dm4.id)
 membership8B = Membership.create!(user_id: user5.id, membership_type: dm4.class.name, membership_id: dm4.id)
 membership8C = Membership.create!(user_id: user6.id, membership_type: dm4.class.name, membership_id: dm4.id)
+
+test_msg = Message.create!(body: "hello", user_id: demo1.id, messaged_type: channel1A.class.name, messaged_id: channel1A.id)
+test_dm = Message.create!(body: "testing dm", user_id: demo1.id, messaged_type: dm1.class.name, messaged_id: dm1.id)

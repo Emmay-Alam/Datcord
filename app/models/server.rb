@@ -7,6 +7,8 @@ class Server < ApplicationRecord
     foreign_key: :owner_id,
     class_name: :User
 
+  has_one_attached :photo
+
   has_many :channels,
     primary_key: :id,
     foreign_key: :server_id,

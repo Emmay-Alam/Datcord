@@ -10,7 +10,7 @@ const DmsReudcer = (oldState = {}, action) => {
     case RECEIVE_DMS:
       return action.dms
     case RECEIVE_DM:
-      newState[action.dms.id] = action.dm;
+      newState[action.dm.id] = action.dm;
       return newState;
     default:
       return oldState;

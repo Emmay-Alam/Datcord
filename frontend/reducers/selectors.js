@@ -5,7 +5,7 @@ export const filterChannels = (state, serverId) => {
   if (!serverChannels) return filteredChannels;
 
   for (let channelId of serverChannels) {
-    filteredChannels.push(state.entities.channels[channelId])
+    if (state.entities.channels[channelId]) filteredChannels.push(state.entities.channels[channelId])
   }
   console.log(filteredChannels);
   return filteredChannels;
@@ -17,3 +17,17 @@ export const filterMembers = (state, serverId) => {
 
   return filteredMembers;
 };
+
+export const filterMessages = (state, ownProps) => {
+  if (ownProps.type === 'Channel') {
+    const filtered = Object.values(state.entities.messages).filter(message =>
+      message.messagedType === "Channel" && message.messagedId === ownProps.messagedId)
+
+    return filtered;
+  } else {
+    const filtered = Object.values(state.entities.messages).filter(message =>
+      message.messagedType === "Dm" && message.messagedId === ownProps.messagedId)
+
+      return filtered;
+  }
+}

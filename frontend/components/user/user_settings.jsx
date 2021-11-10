@@ -3,10 +3,17 @@ import React from 'react';
 class UserSettings extends React.Component {
   constructor(props) {
     super(props);
+
+    this.handleLogout = this.handleLogout.bind(this);
   };
 
+  handleLogout () {
+    this.props.logoutUser()
+      .then(() => this.props.closeModal())
+  }
+
   render () {
-    const { logoutUser, closeModal } = this.props;
+    const { closeModal } = this.props;
     return (
       <div className="settings-container">
         <div className="sidebar-settings">
@@ -19,7 +26,7 @@ class UserSettings extends React.Component {
           </div>
           <div className="logout">
             <ul>
-              <li onClick={() => logoutUser()}>Log Out</li>
+              <li onClick={() => this.handleLogout()}>Log Out</li>
             </ul>
           </div>
         </div>

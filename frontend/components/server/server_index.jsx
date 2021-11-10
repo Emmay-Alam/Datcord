@@ -1,5 +1,6 @@
 import React from 'react';
 import ServerIndexItem from './server_index_item';
+import { HiOutlinePlus } from 'react-icons/hi'
 
 class ServerIndex extends React.Component {
   constructor(props) {
@@ -27,7 +28,9 @@ class ServerIndex extends React.Component {
           { serverIndexItems }
         </ul>
         <div className="new-server">
-          <button onClick={() => openModal('Add a Server')}>Add a Server</button>
+          <button onClick={() => openModal('Add a Server')}>
+          <HiOutlinePlus />
+          </button>
         </div>
       </div>
     )
