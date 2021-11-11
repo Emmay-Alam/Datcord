@@ -22,11 +22,9 @@ class ServerIndexItem extends React.Component {
     const { server } = this.props;
     return (
       <li className="server-index-item">
-        <button className="server-item-button">
-          <Link className="server-item-content" to={`/channels/${server.id}/${server.channels[0]}`}>
-            { this.initials() }
-          </Link>
-        </button>
+        <Link className="server-item-content" to={`/channels/${server.id}/${server.channels[0]}`}>
+          { this.initials() }
+        </Link>
       </li>
     )
   }

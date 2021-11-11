@@ -11,10 +11,12 @@ class ChannelIndexItem extends React.Component {
     const { channel } = this.props;
 
     return channel ? (
-      <div className="channel-index-item">
-        <li>
-          <RiHashtag className="channel-hashtag" size={24} />
-          <Link to={`/channels/${channel.serverId}/${channel.id}`}>
+      <div>
+        <li className="channel-index-item">
+          <div>
+            <RiHashtag className="channel-hashtag" size={26} />
+          </div>
+          <Link className="channel-name" to={`/channels/${channel.serverId}/${channel.id}`}>
             { channel.name }
           </Link>
         </li>

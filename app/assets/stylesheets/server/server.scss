@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Whitney Book';
+  src: url(asset-path('WhitneyBook.ttf')) format('truetype');
+};
+
 .side-container {
   background: #202225;
   color: #fff;
@@ -41,11 +46,13 @@
   justify-content: space-around;
 }
 
-.server-item-button {
+.server-index-item {
   background-color: #36393f;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Whitney Book';
+  font-size: 18px;
   width: 48px;
   height: 48px;
   border: none;
@@ -53,7 +60,7 @@
   margin-bottom: 8px;
 }
 
-.server-item-button:hover {
+.server-index-item:hover {
   background-color: #5865f2;
 }
 

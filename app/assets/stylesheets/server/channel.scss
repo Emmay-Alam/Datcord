@@ -3,6 +3,11 @@
   src: url(asset-path('GintoNormalRegular.ttf')) format('truetype');
 };
 
+@font-face {
+  font-family: 'Whitney Medium';
+  src: url(asset-path('WhitneyMedium.ttf')) format('truetype');
+};
+
 .second-side-container {
   background: #2f3136;
   display: flex;
@@ -52,6 +57,8 @@
 }
 
 .channel-index-item {
+  display: flex;
+  align-items: center;
   height: 34px;
 }
 
@@ -60,4 +67,9 @@
   width: 20px;
   height: 20px;
   margin-right: 6px;
+}
+
+.channel-name {
+  color: #fff;
+  font-family: 'Whitney Medium';
 }
