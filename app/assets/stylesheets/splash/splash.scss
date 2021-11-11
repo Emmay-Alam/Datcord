@@ -13,12 +13,13 @@
 .splash-header {
   background: #404EED;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .navbar-header {
-  display: grid;
+  display: flex;
   justify-content: space-between;
   gap: 0 20px;
   width: 100%;
@@ -42,6 +43,8 @@
 }
 
 .landing-button {
+  display: flex;
+  align-items: center;
   background: #fff;
   font-family: 'Whitney';
   font-size: 14px;
@@ -52,7 +55,7 @@
 
 .splash-slogan > h1 {
   color: #fff;
-  display: grid;
+  display: flex;
   justify-content: center;
   font-family: 'Ginto Nord Black';
   font-size: 56px;

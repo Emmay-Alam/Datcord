@@ -1,5 +1,6 @@
 import React from 'react';
 import ChatRoomContainer from './chat_room_container';
+import { FiAtSign } from 'react-icons/fi';
 
 class ChatDm extends React.Component {
   constructor(props) {
@@ -13,10 +14,19 @@ class ChatDm extends React.Component {
   render () {
     const { dm } = this.props;
 
-    console.log('testing')
     return dm ? (
-      <div>
-        <ChatRoomContainer type={this.props.type} messagedId={this.props.dmId} />
+      <div className="chat-content-container">
+        <div className="chat-header">
+          <div className="chat-hashtag">
+            <FiAtSign size={26}/>
+          </div>
+          <div className="chat-name">
+            { dm.name }
+          </div>
+        </div>
+        <div className="channel-chat">
+          <ChatRoomContainer type={this.props.type} messagedId={dm.id} />
+        </div>
       </div>
     ) : null
   }
