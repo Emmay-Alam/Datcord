@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { RiHashtag } from 'react-icons/ri';
 
 class ChannelIndexItem extends React.Component {
   constructor(props) {
@@ -10,11 +11,16 @@ class ChannelIndexItem extends React.Component {
     const { channel } = this.props;
 
     return channel ? (
-      <li>
-        <Link to={`/channels/${channel.serverId}/${channel.id}`}>
-          { channel.name }
-        </Link>
-      </li>
+      <div>
+        <li>
+          <div class-name="channel-hashtag">
+            <RiHashtag />
+          </div>
+          <Link to={`/channels/${channel.serverId}/${channel.id}`}>
+            { channel.name }
+          </Link>
+        </li>
+      </div>
     ) : null
   }
 }

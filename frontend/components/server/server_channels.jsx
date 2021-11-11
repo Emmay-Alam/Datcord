@@ -25,7 +25,7 @@ class ServerChannels extends React.Component {
             <div class-name="server-settings"><FiChevronDown size={19}/></div>
           </div>
           <div className="channels-index">
-            <h2>TEXT CHANNELS</h2>
+          <h2><FiChevronDown /> TEXT CHANNELS</h2>
             <ChannelIndex server={server} channels={channels} />
           </div>
         </div>

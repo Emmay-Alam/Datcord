@@ -25,7 +25,7 @@ class MessageForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="chat-form">
         <form onSubmit={this.handleSubmit.bind(this)}>
           <input
             type="text"
@@ -33,7 +33,6 @@ class MessageForm extends React.Component {
             onChange={this.update("body")}
             placeholder="Message"
           />
-          <input type="submit" />
         </form>
       </div>
     );

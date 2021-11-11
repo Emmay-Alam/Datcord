@@ -28,7 +28,7 @@ class User extends React.Component {
           <button>
             <BsHeadphones size={21} />
           </button>
-          <button onClick={() => openModal('User Settings')}>
+          <button id="user-setting-button" onClick={() => openModal('User Settings')}>
             <BsGearFill size={17} />
           </button>
         </div>

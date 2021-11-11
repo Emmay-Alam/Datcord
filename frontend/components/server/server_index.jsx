@@ -23,13 +23,14 @@ class ServerIndex extends React.Component {
     )
 
     return (
-      <div>
+      <div className="server-index-container">
         <ul className="server-container">
           { serverIndexItems }
         </ul>
+        <div className="server-index-seperator"></div>
         <div className="new-server">
           <button onClick={() => openModal('Add a Server')}>
-          <HiOutlinePlus />
+            <HiOutlinePlus size={21}/>
           </button>
         </div>
       </div>

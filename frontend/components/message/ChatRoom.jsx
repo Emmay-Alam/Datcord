@@ -8,7 +8,7 @@ class ChatRoom extends React.Component {
     this.bottom = React.createRef();
   }
 
-  componentDidMount() {
+  componentDidMount () {
     App.cable.subscriptions.create(
       { channel: "ChatChannel" },
       {
@@ -25,19 +25,20 @@ class ChatRoom extends React.Component {
         speak: function(data) {return this.perform("speak", data)},
         load: function() {return this.perform("load")}
       }
-    );
+    )
+
+    App.cable.subscriptions.subscriptions[0].load();
   }
 
   loadChat(e) {
     e.preventDefault();
-    App.cable.subscriptions.subscriptions[0].load();
   }
 
   componentDidUpdate() {
     // this.bottom.current.scrollIntoView();
   }
 
-  render() {
+  render () {
 
     const { type, messagedId } = this.props;
 
@@ -51,15 +52,11 @@ class ChatRoom extends React.Component {
     });
     return (
       <div className="chatroom-container">
-        <div>ChatRoom</div>
-        <button className="load-button"
-          onClick={this.loadChat.bind(this)}>
-          Load Chat History
-        </button>
         <div className="message-list">{messageList}</div>
         <MessageFormContainer
           type={type}
-          messagedId={messagedId} />
+          messagedId={messagedId}
+        />
       </div>
     )
   }
