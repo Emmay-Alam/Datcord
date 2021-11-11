@@ -17,6 +17,7 @@
 
 .home-container {
   background: #36393F;
+  transition: background-color .15s ease-out;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,10 +27,15 @@
   border-radius: 50%;
 }
 
-.home-container > img {
+.home-me {
   background: transparent;
-  width: 28px;
+  color: #dcddde;
+  width: 26px;
   height: 20px;
+}
+
+.home-container:hover {
+  background-color: #5865f2;
 }
 
 .server-seperator {

@@ -24,8 +24,24 @@ class DmIndex extends React.Component {
           <div className="fake-search-bar">
             <button readOnly>Find or start a conversation</button>
           </div>
-          <div className="friends-icon">Friends</div>
-          <div className="nitro-icon"></div>
+          <div className="home-tabs">
+            <div className="home-tab">
+              <div className="home-tab-icon">
+
+              </div>
+              <div className="home-tab-text">
+                Friends
+              </div>
+            </div>
+            <div className="home-tab">
+              <div className="home-tab-icon">
+
+              </div>
+              <div className="home-tab-text">
+                Nitro
+              </div>
+            </div>
+          </div>
           <div className="dm-index">
             <h2>DIRECT MESSAGES</h2>
             <ul>

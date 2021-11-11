@@ -55,6 +55,7 @@
 .chatroom-container {
   display: flex;
   flex-direction: column;
+  width: calc(100vw - 552px);
 }
 
 .message-list {
@@ -67,20 +68,41 @@
 }
 
 .chat-form {
-  display: flex;
-  flex-grow: 1;
+  width: 100%;
+  box-sizing: border-box;
   margin-bottom: 24px;
   padding-left: 16px;
   padding-right: 16px;
 }
 
-.chat-form > form > input {
+.chat-form > form > .input-container {
   background-color: #40444b;
   color: #fff;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 43px;
+  box-sizing: border-box;
   border: none;
   border-radius: 8px;
   outline: none;
   padding: 11px 10px 11px 0;
+}
+
+.fake-file-attach {
+  color: #b9bbbe;
+  box-sizing: border-box;
+  padding: 10px 16px;
+}
+
+.message-input {
+  background-color: transparent;
+  color: #fff;
+  height: 100%;
+  font-family: 'Whitney Book';
+  font-size: 16px;
+  border: none;
+  outline: none;
 }
 
 ::-webkit-scrollbar {

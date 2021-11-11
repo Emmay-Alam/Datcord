@@ -35,7 +35,13 @@ class Main extends React.Component {
         </div>
         <div className="members-container">
         <Switch>
-          <Route exact path='/channels/@me/:dmId?' render={() => <h1>"hello"</h1>} />
+          <Route exact path='/channels/@me/:dmId?' render={() =>
+            <ul className="future-features"><p>Coming Soon!</p>
+              <li>Friends</li>
+              <li>Direct Messaging</li>
+              <li>Custom Avatars</li>
+            </ul>
+          } />
           <Route exact path='/channels/:serverId/:channelId' component={ServerMembersContainer} />
         </Switch>
         </div>

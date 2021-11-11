@@ -1,4 +1,5 @@
 import React from 'react';
+import { BsFillPlusCircleFill } from 'react-icons/bs';
 
 class MessageForm extends React.Component {
   constructor(props) {
@@ -27,12 +28,18 @@ class MessageForm extends React.Component {
     return (
       <div className="chat-form">
         <form onSubmit={this.handleSubmit.bind(this)}>
-          <input
+          <div className="input-container">
+            <div className="fake-file-attach">
+              <BsFillPlusCircleFill size={20}/>
+            </div>
+            <input
+            className="message-input"
             type="text"
             value={this.state.body}
             onChange={this.update("body")}
-            placeholder="Message"
-          />
+            placeholder={`Message #${this.props.name}`}
+            />
+          </div>
         </form>
       </div>
     );

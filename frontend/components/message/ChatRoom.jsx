@@ -41,6 +41,7 @@ class ChatRoom extends React.Component {
   render () {
 
     const { type, messagedId } = this.props;
+    const name = type === "Channel" ? this.props.channel.name : this.props.dm.name;
 
     const messageList = this.props.messages.map((message, idx) => {
       return (
@@ -54,6 +55,7 @@ class ChatRoom extends React.Component {
       <div className="chatroom-container">
         <div className="message-list">{messageList}</div>
         <MessageFormContainer
+          name={name}
           type={type}
           messagedId={messagedId}
         />

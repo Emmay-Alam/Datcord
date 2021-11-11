@@ -25,7 +25,7 @@ class ChatChannel extends React.Component {
           </div>
         </div>
         <div className="channel-chat">
-          <ChatRoomContainer type={this.props.type} messagedId={channel.id} />
+          <ChatRoomContainer channel={channel} type={this.props.type} messagedId={channel.id} />
         </div>
       </div>
     ) : null

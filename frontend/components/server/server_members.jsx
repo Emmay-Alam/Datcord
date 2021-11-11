@@ -15,7 +15,7 @@ class ServerMembers extends React.Component {
   render () {
     const { server, members } = this.props;
     return server ? (
-      <div>
+      <div className="members-index-container">
         <div className="members-index">
           <MemberIndex server={server} members={members} />
         </div>

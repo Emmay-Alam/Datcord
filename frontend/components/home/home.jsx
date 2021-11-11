@@ -7,7 +7,7 @@ class Home extends React.Component {
       <div className="home-wrapper">
         <div className="home-container">
           <Link to='/channels/@me'>
-            <img className="home-me" src={window.icon} />
+            <img className="home-me" src="https://github.com/Emmay-Alam/Datcord/blob/channel/app/assets/images/discord_icon.png?raw=true" />
           </Link>
         </div>
       </div>
