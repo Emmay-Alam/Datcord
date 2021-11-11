@@ -48,6 +48,7 @@
 
 .server-index-item {
   background-color: #36393f;
+  transition: background-color .15s ease-out;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,6 +84,7 @@
 .new-server > button {
   background-color: #36393f;
   color: #3BA55D;
+  transition: background-color .15s ease-out, color .15s ease-out;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,4 +93,9 @@
   border: none;
   border-radius: 50%;
   margin-bottom: 8px;
+}
+
+.new-server > button:hover {
+  background-color: #3BA55D;
+  color:#fff;
 }
