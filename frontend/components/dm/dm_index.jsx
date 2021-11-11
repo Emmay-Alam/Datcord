@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import DmIndexItem from './dm_index_item';
 import UserContainer from '../user/user_container';
 
