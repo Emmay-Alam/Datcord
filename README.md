@@ -2,7 +2,9 @@
 
 [Datcord](https://ea-datcord.herokuapp.com/#/) is a clone of the VoIP, instant messaging, and digital distribution platform, [Discord](https://discord.com). On Datcord, users can create and join communities called "servers" to chat with other users in those servers or have private conversations between friends on the app.
 
-<img src="app/assets/images/prod_readme/DatcordSplash.png" />
+<p align="center">
+  <img src="app/assets/images/prod_readme/DatcordSplash.png" />
+</p>
 
 ## Technologies Used
 ***
@@ -29,7 +31,9 @@
 
 Users can create new accounts which they can use to log in and out of Datcord. On successful login, they will be routed to the main app. On unsuccessful login, errors will be displayed in red. A demo user is provided so that users can browse the site without having to create an account themselves.
 
-<img src="app/assets/images/prod_readme/UserAuth.png" />
+<p align="center">
+  <img src="app/assets/images/prod_readme/UserAuth.png" />
+</p>
 
 ### **Live Chat**
 
