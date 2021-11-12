@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'Whitney Book';
+  src: url(asset-path('WhitneyBook.ttf')) format('truetype');
+};
+
+@font-face {
+  font-family: 'Whitney Medium';
+  src: url(asset-path('WhitneyMedium.ttf')) format('truetype');
+};
+
+@font-face {
+  font-family: 'Ginto Normal Regular';
+  src: url(asset-path('GintoNormalRegular.ttf')) format('truetype');
+};
+
+@font-face {
+  font-family: 'Ginto Normal Medium';
+  src: url(asset-path('GintoNormalMedium.ttf')) format('truetype');
+};
+
+.members-container {
+  background: #2f3136;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  height: calc(100vh);
+  box-sizing: border-box;
+}
+
+.members-index-container {
+  margin-top: 48px;
+  padding-right: 20px;
+}
+
+.members-index > div > h2 {
+  color: #8e9297;
+  font-family: 'Ginto Normal Medium';
+  font-size: 12px;
+  font-weight: 600px;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 24px 8px 0 16px;
+}
+
+.member-list-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-right: 8px;
+}
+
+.member-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 224px;
+  height: 42px;
+  box-sizing: border-box;
+  margin-left: 8px;
+  padding: 0 8px;
+}
+
+.member-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+}
+
+.member-icon > img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.member-name {
+  color: #8e9297;
+  font-family: 'Whitney Medium';
+  font-size: 16px;
+  text-align: center;
+}
+
+.future-features {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'Whitney Book';
+  font-size: 18px;
+  margin-top: 48px;
+}
+
+.future-features > p {
+  font-family: 'Ginto Normal Regular';
+  font-size: 20px;
+  margin: 20px 0 10px;
+}
+
+.future-features > li {
+  margin-top: 5px;
+}

@@ -1,1 +1,7 @@
+<% if logged_in? %>
+  <script>
+    window.currentUser = { id: <%= current_user.id %> }
+  </script>
+<% end %>
+
 <div id="root">Hello World</div>

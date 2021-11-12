@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .side-container {
   display: flex;
   flex-direction: column;
@@ -6,4 +7,119 @@
   height: 100vh;
   background: #202225;
   color: #fff;
+=======
+@font-face {
+  font-family: 'Whitney Book';
+  src: url(asset-path('WhitneyBook.ttf')) format('truetype');
+};
+
+.side-container {
+  background: #202225;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 72px;
+  height: 100vh;
+  padding-top: 12px;
+  box-sizing: border-box;
+}
+
+.home-container {
+  background: #36393F;
+  transition: background-color .15s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+}
+
+.home-me {
+  background: transparent;
+  color: #dcddde;
+  width: 26px;
+  height: 20px;
+}
+
+.home-container:hover {
+  background-color: #5865f2;
+}
+
+.server-seperator {
+  background-color: rgba(255, 255, 255, 0.06);
+  width: 32px;
+  height: 2px;
+  border-radius: 1px;
+  margin-bottom: 8px;
+}
+
+.server-index-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.server-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.server-index-item {
+  background-color: #36393f;
+  transition: background-color .15s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Whitney Book';
+  font-size: 18px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.server-index-item:hover {
+  background-color: #5865f2;
+}
+
+.server-item-content {
+  color: #fff;
+  font-weight: 500;
+  line-height: 19.2px;
+  text-decoration: none;
+}
+
+.server-index-seperator {
+  background-color: rgba(255, 255, 255, 0.06);
+  width: 32px;
+  height: 2.5px;
+  border-radius: 1px;
+  margin-bottom: 8px;
+}
+
+.new-server > button {
+  background-color: #36393f;
+  color: #3BA55D;
+  transition: background-color .15s ease-out, color .15s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.new-server > button:hover {
+  background-color: #3BA55D;
+  color:#fff;
+  border-radius: 30%;
+>>>>>>> channel
 }

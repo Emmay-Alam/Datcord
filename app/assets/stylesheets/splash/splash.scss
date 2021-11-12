@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('http://fonts.cdnfonts.com/css/whitney-2');
 
 @font-face {
@@ -65,3 +66,157 @@
   font-family: 'Whitney';
   font-size: 20px;
 }
+=======
+@font-face {
+  font-family: 'Ginto Nord Black';
+  src: url(asset-path('GintoNordBlack.ttf')) format('truetype');
+};
+
+@font-face {
+  font-family: 'Ginto Nord Bold';
+  src: url(asset-path('GintoNordBold.ttf')) format('truetype');
+};
+
+@font-face {
+  font-family: 'Whitney Book';
+  src: url(asset-path('WhitneyBook.ttf')) format('truetype');
+};
+
+@font-face {
+  font-family: 'Whitney Medium';
+  src: url(asset-path('WhitneyMedium.ttf')) format('truetype');
+};
+
+.navbar-header {
+  background-color: #404EED;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+
+  h2 {
+    font-family: 'Ginto Nord Bold';
+    font-size: 18px;
+    color: white;
+  }
+}
+
+.navbar-links {
+  display: flex;
+  text-align: center;
+}
+
+.navbar-links > li {
+  color: #fff;
+  display: flex;
+  font-family: 'Whitney Medium';
+  font-size: 16px;
+  font-weight: 500;
+  height: 41px;
+  box-sizing: border-box;
+  margin: 0 10px 0px 10px;
+  padding: 10px;
+}
+
+.landing-button {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  font-family: 'Whitney Medium';
+  font-size: 14px;
+  text-align: center;
+  height: 37px;
+  padding: 7px 16px;
+  box-sizing: border-box;
+  border-radius: 40px;
+  white-space: nowrap;
+}
+
+.first-landing-background {
+  background-color: #404EED;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 546px;
+}
+
+.splash-slogan-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-slogan {
+  width: 40%;
+  height: 100%;
+
+  h1 {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    font-family: 'Ginto Nord Black';
+    font-size: 56px;
+    text-align: center;
+  }
+
+  p {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    font-family: 'Whitney Book';
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    line-height: 1.625;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+.splash-btn-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  width: 80%;
+}
+
+.download-btn {
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  color: #000;
+  text-align: center;
+  font-family: 'Whitney Medium';
+  font-size: 20px;
+  border: none;
+  border-radius: 28px;
+  padding: 16px 32px;
+  margin: 0px 10px;
+
+  svg {
+    margin-right: 8px;
+  }
+}
+
+.button-seperator {
+  background: transparent;
+  width: 24px;
+}
+
+.open-btn {
+  background-color: #23272A;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-family:'Whitney Medium';
+  border: none;
+  border-radius: 28px;
+  padding: 16px 32px;
+  margin: 0px 10px;
+}
+
+>>>>>>> channel

@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'Whitney Book';
+  src: url(asset-path('WhitneyBook.ttf')) format('truetype');
+};
+
+.user-container {
+  background-color: #292b2f;
+  display: flex;
+  flex-direction: row;
+  height: 52px;
+  box-sizing: border-box;
+  margin: 0 0 1px;
+  padding: 0 8px;
+}
+
+.user-content-container {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+.user-avatar > img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-right: 8px;
+  width: 84px;
+}
+
+.user-username {
+  color: #fff;
+  font-family: 'Whitney Book';
+  font-size: 13.25px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 18px;
+}
+
+.user-tag {
+  color: #b9bbbe;
+  font-family: 'Whitney Book';
+  font-size: 12px;
+  line-height: 13.25px;
+}
+
+.user-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-buttons > button {
+  background: transparent;
+  color: #b9bbbe;
+  border: none;
+  width: 32px;
+  height: 32px;
+}
+
+#user-setting-button:hover {
+  color: #dcddde;
+  background-color: #4f545c;
+  border-radius: 4px;
+}

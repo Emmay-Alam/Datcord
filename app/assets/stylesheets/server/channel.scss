@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'Ginto Normal Regular';
+  src: url(asset-path('GintoNormalRegular.ttf')) format('truetype');
+};
+
+@font-face {
+  font-family: 'Ginto Normal Medium';
+  src: url(asset-path('GintoNormalMedium.ttf')) format('truetype');
+};
+
+@font-face {
+  font-family: 'Whitney Medium';
+  src: url(asset-path('WhitneyMedium.ttf')) format('truetype');
+};
+
+.second-side-container {
+  background: #2f3136;
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  height: 100vh;
+}
+
+.server-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%
+}
+
+.server-header {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-family: 'Ginto Normal Regular';
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  width: 240px;
+  height: 48px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 rgba(4,4,5,0.2),0 1.5px 0 rgba(6,6,7,0.05),0 2px 0 rgba(4,4,5,0.05);
+  padding: 0 16px;
+}
+
+.server-name {
+  width: 186px;
+  line-height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.channels-index {
+  padding-right: 8px;
+}
+
+.channels-index > h2 {
+  color: #8e9297;
+  font-family: 'Ginto Normal Medium';
+  font-size: 12.5px;
+  padding: 16px 0 8px 0;
+}
+
+.channel-index-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.channel-index-item {
+  display: flex;
+  align-items: center;
+  height: 34px;
+  padding-left: 10px;
+}
+
+.channel-hashtag {
+  color: #72767d;
+  width: 22px;
+  height: 22px;
+  margin-right: 6px;
+}
+
+.channel-name {
+  color: #8e9297;
+  font-family: 'Whitney Medium';
+  text-decoration: none;
+}
