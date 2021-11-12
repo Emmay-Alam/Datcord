@@ -31,18 +31,18 @@ class Login extends React.Component {
 
     setTimeout(() => {
       this.demoLogin(email, password)
-    }, 1)
+    }, 500)
   }
 
   demoLogin(email, password) {
 
     if (email.length > 0) {
       this.setState({ email: this.state.email + email.shift() },
-        () => window.setTimeout(() => this.demoLogin(email, password), 1)
+        () => window.setTimeout(() => this.demoLogin(email, password), 100)
       );
     } else if (password.length > 0) {
       this.setState({ password: this.state.password + password.shift() },
-        () => window.setTimeout(() => this.demoLogin(email, password), 1)
+        () => window.setTimeout(() => this.demoLogin(email, password), 100)
       );
     } else {
       this.userLogin();
