@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
-
-const UsersReducer = (oldState = {}, action) => {
-  Object.freeze(oldState);
-
-  switch (action.type) {
-    case RECEIVE_CURRENT_USER:
-      return Object.assign({}, oldState, { [action.user.id]: action.user })
-    default:
-      return oldState;
-  }
-}
-
-=======
 import { RECEIVE_SERVER } from '../actions/server_actions';
 import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
 
@@ -43,5 +28,4 @@ const UsersReducer = (oldState = {}, action) => {
   }
 }
 
->>>>>>> channel
 export default UsersReducer;

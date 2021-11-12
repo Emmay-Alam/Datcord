@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-export const createChannel = (serverId, channel) => (
-  $.ajax({
-    method: 'POST',
-    url: `/api/${serverId}/channels`,
-    data: { channel }
-  })
-=======
 export const requestChannel = channelId => (
   $.ajax({
     method: 'GET',
@@ -26,5 +18,4 @@ export const deleteChannel = channelId => (
     method: 'DELETE',
     url: `/api/channels/${channelId}`
   })
->>>>>>> channel
 );

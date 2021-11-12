@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-User.destroy_all
-
-demo1 = User.create!(username: "demo", email: "demouser@gmail.com", password: "password", dob: "2000-01-01", tag: 9001)
-demo2 = User.create!(username: "demo2", email: "demouser2@gmail.com", password: "password", dob: "2000-01-01", tag: 8999)
-user1 = User.create!(username: "sunshinenim", email: "mansoo@gmail.com", password: "password", dob: "1993-06-09", tag: 4171)
-user2 = User.create!(username: "wood", email: "wood@gmail.com", password: "password", dob: "1997-03-04", tag: 1234)
-user3 = User.create!(username: "stelluhhh", email: "stella@gmail.com", password: "password", dob: "1997-09-13", tag: 229)
-user4 = User.create!(username: "8eanie", email: "subin@gmail.com", password: "password", dob: "1996-04-08", tag: 0001)
-user5 = User.create!(username: "suzinator", email: "suz@gmail.com", password: "password", dob: "1994-07-29", tag: 6969)
-user6 = User.create!(username: "soheep", email: "sohee@gmail.com", password: "password", dob: "1991-01-14", tag: 4582)
-user7 = User.create!(username: "arebiter", email: "pasan@gmail.com", password: "password", dob: "1996-09-14", tag: 9675)
-user8 = User.create!(username: "mothammer", email: "matt@gmail.com", password: "password", dob: "1988-04-22", tag: 1836)
-
-Server.destroy_all
-
-server1 = Server.create!(name: "True Study Buddies Come to FL", owner_id: user1.id)
-server2 = Server.create!(name: "a/A 08-09-2021 Discord", owner_id: demo2.id)
-server3 = Server.create!(name: "soybean", owner_id: user4.id)
-server4 = Server.create!(name: "One Brain One Cohort", owner_id: user2.id)
-=======
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -122,4 +93,3 @@ membership8C = Membership.create!(user_id: user6.id, membership_type: dm4.class.
 
 test_msg = Message.create!(body: "hello", user_id: demo1.id, messaged_type: channel1A.class.name, messaged_id: channel1A.id)
 test_dm = Message.create!(body: "testing dm", user_id: demo1.id, messaged_type: dm1.class.name, messaged_id: dm1.id)
->>>>>>> channel

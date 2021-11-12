@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import { combineReducers } from 'redux';
-import UsersReducer from './users_reducer';
-import ServersReducer from './servers_reducer';
-
-const EntitiesReducer = combineReducers({
-  users: UsersReducer,
-  servers: ServersReducer
-});
-
-=======
 import { combineReducers } from 'redux';
 import UsersReducer from './users_reducer';
 import ServersReducer from './servers_reducer';
@@ -24,5 +13,4 @@ const EntitiesReducer = combineReducers({
   messages: MessagesReducer
 });
 
->>>>>>> channel
 export default EntitiesReducer;
