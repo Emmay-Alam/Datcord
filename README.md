@@ -25,7 +25,6 @@
 - SendGrid
 
 ## Features
-***
 
 ### **User Auth**
 
@@ -83,7 +82,6 @@ export default connect(mSTP, mDTP)(ChatRoom);
 ```
 
 ## Future Features
-***
 
 - Error handling to mimic the actual experience from Discord
 - More robust live chat (timestamps)
