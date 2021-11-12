@@ -7,7 +7,7 @@
 </p>
 
 ## Technologies Used
-***
+
 *Backend:*
 - Ruby on Rails
 
