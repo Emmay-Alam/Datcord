@@ -24,6 +24,12 @@
   margin-right: 8px;
 }
 
+.user-avatar > img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
 .user-info {
   display: flex;
   flex-direction: column;

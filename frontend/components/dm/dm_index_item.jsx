@@ -10,8 +10,13 @@ class DmIndexItem extends React.Component {
     const { dm } = this.props;
 
     return (
-      <li>
-        <Link to={`/channels/@me/${dm.id}`}>{ dm.name }</Link>
+      <li className="dm-info">
+        <div className="dm-icon">
+          <img src="https://raw.githubusercontent.com/Emmay-Alam/Datcord/channel/app/assets/images/default_discord_pfp.png" />
+        </div>
+        <div className="dm-name">
+          <Link className="dm-name-link" to={`/channels/@me/${dm.id}`}>{ dm.name }</Link>
+        </div>
       </li>
     )
   }

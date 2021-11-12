@@ -37,7 +37,7 @@ class MessageForm extends React.Component {
             type="text"
             value={this.state.body}
             onChange={this.update("body")}
-            placeholder={`Message #${this.props.name}`}
+            placeholder={`Message ${this.props.name}`}
             />
           </div>
         </form>

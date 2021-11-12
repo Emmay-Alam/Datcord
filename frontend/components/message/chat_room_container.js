@@ -6,11 +6,10 @@ import {
   removeMessage } from '../../actions/message_actions';
 import { filterMessages } from '../../reducers/selectors';
 
-const mSTP = (state, ownProps) => {
-  return {
+const mSTP = (state, ownProps) => ({
   currentUser: state.session.id,
   messages: filterMessages(state, ownProps)
-}}
+})
 
 const mDTP = dispatch => ({
   receiveMessages: messages => dispatch(receiveMessages(messages)),

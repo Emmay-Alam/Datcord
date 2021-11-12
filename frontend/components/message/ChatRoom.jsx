@@ -38,10 +38,14 @@ class ChatRoom extends React.Component {
     // this.bottom.current.scrollIntoView();
   }
 
+  componentWillUnmount() {
+    App.cable.disconnect;
+  }
+
   render () {
 
     const { type, messagedId } = this.props;
-    const name = type === "Channel" ? this.props.channel.name : this.props.dm.name;
+    const name = type === "Channel" ? `#${this.props.channel.name}` : this.props.dm.name;
 
     const messageList = this.props.messages.map((message, idx) => {
       return (
@@ -51,7 +55,7 @@ class ChatRoom extends React.Component {
         </li>
       )
     });
-    return (
+    return messageList ? (
       <div className="chatroom-container">
         <div className="message-list">{messageList}</div>
         <MessageFormContainer
@@ -60,7 +64,7 @@ class ChatRoom extends React.Component {
           messagedId={messagedId}
         />
       </div>
-    )
+    ) : null
   }
 }
 

@@ -24,7 +24,7 @@ class ChannelIndex extends React.Component {
     )
 
     return (
-      <ul>
+      <ul className="channel-index-items">
         { channelIndexItems }
       </ul>
     )

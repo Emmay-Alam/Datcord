@@ -7,7 +7,6 @@ export const filterChannels = (state, serverId) => {
   for (let channelId of serverChannels) {
     if (state.entities.channels[channelId]) filteredChannels.push(state.entities.channels[channelId])
   }
-  console.log(filteredChannels);
   return filteredChannels;
 };
 

@@ -4,6 +4,11 @@
 };
 
 @font-face {
+  font-family: 'Ginto Normal Medium';
+  src: url(asset-path('GintoNormalMedium.ttf')) format('truetype');
+};
+
+@font-face {
   font-family: 'Whitney Medium';
   src: url(asset-path('WhitneyMedium.ttf')) format('truetype');
 };
@@ -52,25 +57,32 @@
 
 .channels-index > h2 {
   color: #8e9297;
-  font-family: 'Ginto Normal Regular';
+  font-family: 'Ginto Normal Medium';
   font-size: 12.5px;
-  padding: 16px 0 0 0;
+  padding: 16px 0 8px 0;
+}
+
+.channel-index-items {
+  display: flex;
+  flex-direction: column;
 }
 
 .channel-index-item {
   display: flex;
   align-items: center;
   height: 34px;
+  padding-left: 10px;
 }
 
 .channel-hashtag {
   color: #72767d;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   margin-right: 6px;
 }
 
 .channel-name {
-  color: #fff;
+  color: #8e9297;
   font-family: 'Whitney Medium';
+  text-decoration: none;
 }

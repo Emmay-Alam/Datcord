@@ -24,8 +24,8 @@ class MemberIndex extends React.Component {
 
     return (
       <div>
-        <h2>MEMBERS - { Object.values(members).length }</h2>
-        <ul>
+        <h2>MEMBERS—{ Object.values(members).length }</h2>
+        <ul className="member-list-container">
           { memberIndexItems }
         </ul>
       </div>

@@ -12,7 +12,9 @@ class User extends React.Component {
 
     return (
       <div className="user-content-container">
-        <div className="user-avatar"></div>
+        <div className="user-avatar">
+          <img src="https://raw.githubusercontent.com/Emmay-Alam/Datcord/channel/app/assets/images/default_discord_pfp.png" />
+        </div>
         <div className="user-info">
           <div className="user-username">
             {currentUser.username}

@@ -8,21 +8,16 @@ class ServerIndexItem extends React.Component {
 
   initials () {
     const words = this.props.server.name.split(" ")
-
-    // if (words.length > 1) {
-    //   return words[0][0].toUpperCase() + words[1][0].toLowerCase()
-    // } else {
-    //   return words [0][0].toUpperCase()
-    // }
-
-    return words.map(word => word[0])
+    return words.map(word => word[0]).join('')
   };
 
   render () {
+  const fontSize = this.initials().length < 4 ? 18 : 12;
+
     const { server } = this.props;
     return (
       <li className="server-index-item">
-        <Link className="server-item-content" to={`/channels/${server.id}/${server.channels[0]}`}>
+        <Link className="server-item-content" style={{fontSize}} to={`/channels/${server.id}/${server.channels[0]}`}>
           { this.initials() }
         </Link>
       </li>
