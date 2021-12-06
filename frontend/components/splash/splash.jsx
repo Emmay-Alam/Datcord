@@ -38,6 +38,14 @@ class Splash extends React.Component {
             </div>
           </div>
         </div>
+        <div className="second-landing-background">
+          <div className="splash-img-1">
+          </div>
+          <div>
+            <h1></h1>
+            <p></p>
+          </div>
+        </div>
       </main>
     )
   }
