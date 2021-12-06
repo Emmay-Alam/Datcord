@@ -40,10 +40,20 @@ class Splash extends React.Component {
         </div>
         <div className="second-landing-background">
           <div className="splash-img-1">
+            <img src="https://raw.githubusercontent.com/Emmay-Alam/Datcord/9166b9d143ba9f6c16fa462438b00c9915f11fab/app/assets/images/splash/splash1.svg" />
           </div>
           <div>
-            <h1></h1>
-            <p></p>
+            <h1>Create an invite-only place where you belong</h1>
+            <p>Discord servers are organized into topic-based channels where you can collaborate, share, and just talk about your day without clogging up a group chat.</p>
+          </div>
+        </div>
+        <div className="third-landing-background">
+          <div>
+            <h1>Where hanging out is easy</h1>
+            <p>Grab a seat in a voice channel when you’re free. Friends in your server can see you’re around and instantly pop in to talk without having to call.</p>
+          </div>
+          <div className="splash-img-1">
+            <img src="https://raw.githubusercontent.com/Emmay-Alam/Datcord/9166b9d143ba9f6c16fa462438b00c9915f11fab/app/assets/images/splash/splash1.svg" />
           </div>
         </div>
       </main>
