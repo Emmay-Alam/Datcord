@@ -34,7 +34,11 @@ class ChatRoom extends React.Component {
     e.preventDefault();
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
+    if (prevProps.channelId != this.props.channelId) {
+      App.cable.subscriptions.subscriptions[0].load();
+      console.log(this.props);
+    }
     // this.bottom.current.scrollIntoView();
   }
 
@@ -46,7 +50,7 @@ class ChatRoom extends React.Component {
 
     const { type, messagedId } = this.props;
     const name = type === "Channel" ? `#${this.props.channel.name}` : this.props.dm.name;
-
+    console.log(this.props);
     const messageList = this.props.messages.map((message, idx) => {
       return (
         <li key={message.id}>

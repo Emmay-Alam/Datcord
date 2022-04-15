@@ -20,7 +20,7 @@ export const filterMembers = (state, serverId) => {
 export const filterMessages = (state, ownProps) => {
   if (ownProps.type === 'Channel') {
     const filtered = Object.values(state.entities.messages).filter(message =>
-      message.messagedType === "Channel" && message.messagedId === ownProps.messagedId)
+      message.messaged_type === "Channel" && message.messaged_id === ownProps.messagedId)
 
     return filtered;
   } else {
